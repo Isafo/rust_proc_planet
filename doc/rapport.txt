@@ -5,3 +5,21 @@ float green = step(sandHeight, Altitude) *  step(Altitude, snowHeight + snowNois
 	Check that the altitude larger than sandheight and smaller than snowheight plus some noise to avoid a sharp edge, these areas are grass areas and should have a green/ yellow ish color 
 
 fbm - https://code.google.com/archive/p/fractalterraingeneration/wikis/Fractional_Brownian_Motion.wiki
+
+
+Generating the surface
+In order to generate the surface of the planet 3d simplex noise is used in the vertex shader in order to displace the vertices on a sphere. Simplex noise was chosen since it provides a noise function with fewer directional artifacs compared to perlin noise. Simplex noise is used in combination with the summation method Fractional Brownian Motion (FBM). FBM is used to by summarizing octaves of noise the detail of the generated map increases with the number of octaves used. 
+
+Coloring the surface
+
+* ground color
+* deep sea color
+* night light pollution
+
+Generating the clounds
+
+
+Stars
+ * generating
+ * size and color
+
